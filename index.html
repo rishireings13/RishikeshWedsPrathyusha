@@ -1,184 +1,536 @@
 <!DOCTYPE html>
-<html lang="en"><head><meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-<title>Rishikesh Weds Prathyusha – Wedding Invitation</title>
-<meta property="og:title" content="Rishikesh &amp; Prathyusha – Wedding Invitation">
-<meta property="og:description" content="You are cordially invited to our wedding, 11–14 December 2026, Gajuwaka.">
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@500;700&family=Cormorant+Garamond:ital,wght@0,500;0,700;1,500&family=Great+Vibes&family=Noto+Serif+Telugu:wght@600;700&display=swap" rel="stylesheet">
-<style>
-:root{--mar:#6b0f1a;--mar2:#8b1a2b;--dk:#3d070e;--gold:#c9a24b;--gold2:#f0d78c;--iv:#fffaf0;--pe:#fde3d0;color-scheme:light;box-sizing:border-box}
-*{box-sizing:border-box}html{scroll-behavior:smooth}
-body{margin:0;background:linear-gradient(var(--iv),var(--pe) 40%,var(--iv));color:var(--mar);font:500 19px 'Cormorant Garamond',Georgia,serif;text-align:center;overflow-x:hidden;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
-.te{font-family:'Noto Serif Telugu',serif;font-weight:600}
-.sc{font-family:'Great Vibes',cursive;font-weight:400}
-.cz{font-family:'Cinzel',serif;letter-spacing:3px;text-transform:uppercase}
-canvas#fx{position:fixed;inset:0;width:100%;height:100%;pointer-events:none;z-index:40}
-/* splash */
-#sp{position:fixed;inset:0;z-index:100;background:radial-gradient(circle at 50% 30%,var(--mar2),var(--dk) 80%);color:var(--gold2);display:flex;flex-direction:column;align-items:center;justify-content:center;padding:20px;transition:opacity .9s,visibility .9s;overflow:auto}
-#sp.off{opacity:0;visibility:hidden}
-#sp:before{content:'';position:absolute;width:min(130vw,900px);height:min(130vw,900px);border:1px solid #c9a24b66;border-radius:50%;top:8%}
-.bells{display:flex;gap:min(22vw,160px);align-items:flex-start;position:absolute;top:0}
-.bells svg{width:46px;transform-origin:top;animation:sw 3s ease-in-out infinite}.bells svg:nth-child(2){animation-delay:.6s;margin-top:20px}.bells svg:nth-child(3){animation-delay:1.2s}
-@keyframes sw{50%{transform:rotate(7deg)}}
-.med{width:150px;height:150px;border-radius:50%;background:linear-gradient(135deg,#e9c46a,#a67c1f);border:5px solid var(--mar);box-shadow:0 0 0 3px var(--gold),0 0 40px #c9a24b88;display:flex;align-items:center;justify-content:center;font-size:58px;color:var(--mar);margin:60px 0 24px;position:relative}
-#sp h1{font-size:clamp(40px,10vw,70px);margin:4px 0;color:var(--gold2);line-height:1.1}
-.btn{display:inline-block;margin:6px;padding:12px 26px;border-radius:40px;border:2px solid var(--gold);background:linear-gradient(135deg,var(--mar),var(--mar2));color:var(--gold2);font:700 15px 'Cinzel',serif;letter-spacing:2px;cursor:pointer;text-decoration:none;box-shadow:0 4px 14px #6b0f1a44}
-.btn.g{background:linear-gradient(135deg,#f0d78c,#b88a2b);color:var(--mar);font-size:17px;padding:14px 34px}
-.btn.al{background:var(--iv);color:var(--mar)}
-#sp a.nm{color:#c9a24bcc;font-size:15px;cursor:pointer;margin-top:10px;text-decoration:underline}
-/* toran */
-.tor{height:48px;background:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='56' height='46'%3E%3Cpath d='M0 3H56' stroke='%23c9a24b' stroke-width='2'/%3E%3Cpath d='M28 4C14 14 16 34 28 44 40 34 42 14 28 4Z' fill='%23437a3a'/%3E%3Cpath d='M28 6V40' stroke='%2395c47f'/%3E%3Ccircle cx='6' cy='10' r='5' fill='%23f39c12'/%3E%3C/svg%3E") repeat-x}
-/* hero */
-.hero{max-width:1000px;margin:auto;padding:24px 18px 50px;display:grid;grid-template-columns:1.1fr .9fr;gap:20px;align-items:center;text-align:left}
-.hero h1{font-size:clamp(52px,9vw,96px);line-height:1;margin:6px 0;background:linear-gradient(90deg,#b88a2b,#f0d78c,#b88a2b);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 1px 0 #6b0f1a55)}
-.hero h1 i{display:block;font-style:normal;font-size:.5em;color:var(--mar);-webkit-text-fill-color:#d6264a;animation:bt 1.6s infinite}
-@keyframes bt{50%{transform:scale(1.25)}}
-.pill{display:inline-block;border:1px solid var(--gold);border-radius:30px;padding:6px 18px;color:var(--mar2)}
-.arch{width:min(100%,340px);margin:auto;border:4px solid var(--gold);border-radius:170px 170px 14px 14px;padding:8px;background:#fff8;box-shadow:0 14px 40px #6b0f1a33}
-.arch svg{display:block;width:100%;border-radius:160px 160px 8px 8px}
-.ttl{margin:0;font-size:clamp(34px,7vw,52px);color:var(--mar2)}
-.orn{color:var(--gold);letter-spacing:8px}
-/* countdown */
-.band{background:radial-gradient(circle at 50% 0,var(--mar2),var(--dk));color:var(--gold2);padding:40px 16px;border-top:5px double var(--gold);border-bottom:5px double var(--gold)}
-.band .ttl{color:var(--gold2)}
-.cd{display:flex;gap:12px;justify-content:center;flex-wrap:wrap;margin:18px 0}
-.cd div{min-width:78px;padding:14px 6px;border:1px solid var(--gold);border-radius:8px;font:500 12px 'Cinzel',serif;letter-spacing:2px;text-transform:uppercase}
-.cd b{display:block;font:700 32px 'Cinzel',serif;color:#fff}
-section{padding:44px 16px;max-width:1000px;margin:auto}
-.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:18px;margin-top:22px}
-.card{background:linear-gradient(170deg,#fffdf7,var(--pe));border:2px solid var(--gold);outline:1px solid var(--gold2);outline-offset:-8px;border-radius:14px;padding:0 16px 18px;box-shadow:0 8px 22px #6b0f1a22;opacity:0;transform:translateY(26px);transition:.8s;text-align:left;overflow:hidden}
-.card.in{opacity:1;transform:none}
-.card .tor{height:30px;background-size:34px 28px;margin:0 -16px 10px}
-.card .row{display:flex;justify-content:space-between;align-items:flex-start;gap:8px}
-.ic{width:46px;height:46px;border-radius:50%;background:var(--mar);color:var(--gold2);display:flex;align-items:center;justify-content:center;font-size:22px}
-.dt{text-align:right;font-family:'Cinzel',serif;line-height:1.1}.dt b{font-size:34px;display:block}.dt small{font-size:11px;letter-spacing:2px}
-.card h3{margin:8px 0 0;font:700 18px 'Cinzel',serif;letter-spacing:1px}
-.card .te{font-size:17px;color:var(--mar2)}
-.card p{margin:6px 0}
-.card .btn{font-size:11px;padding:7px 14px;margin:8px 0 0}
-.card.feat{grid-column:1/-1;background:radial-gradient(circle at 50% 0,var(--mar2),var(--dk));color:var(--gold2);text-align:center}
-.card.feat h3{font-size:clamp(26px,6vw,40px);font-family:'Great Vibes',cursive;font-weight:400;letter-spacing:0}
-.card.feat .te{color:var(--gold2)}.card.feat .ic,.card.feat .dt{margin:0 auto;text-align:center}
-.card.feat .row{flex-direction:column;align-items:center}
-.card.feat .btn{background:none;color:var(--gold2)}
-.big{font:700 110px 'Cinzel',serif;color:var(--gold);line-height:1}
-.gal{display:grid;grid-template-columns:repeat(3,1fr);gap:10px;max-width:640px;margin:20px auto}
-.gal div{aspect-ratio:3/4;border:3px solid var(--gold);border-radius:90px 90px 10px 10px;background:linear-gradient(160deg,var(--pe),#fff);display:flex;flex-direction:column;align-items:center;justify-content:center;font-size:36px;overflow:hidden}
-.gal div:first-child{grid-column:span 2;grid-row:span 2;aspect-ratio:auto;font-size:60px}
-.gal small{font-size:13px;color:var(--mar2)}.gal img{width:100%;height:100%;object-fit:cover}
-.vc{max-width:440px;margin:18px auto;padding:26px 18px;border:2px solid var(--gold);border-radius:14px;background:linear-gradient(170deg,#fffdf7,var(--pe));box-shadow:0 8px 22px #6b0f1a22}
-.lk{display:flex;max-width:520px;margin:18px auto 8px;border:2px solid var(--gold);border-radius:40px;overflow:hidden;background:#fff}
-.lk input{flex:1;min-width:0;border:0;padding:10px 16px;font:16px 'Cormorant Garamond',serif;color:var(--mar);background:none}
-.lk .btn{margin:0;border-radius:0;font-size:12px}
-.sh{display:flex;gap:10px;justify-content:center;flex-wrap:wrap}
-.sh .btn{font-size:12px;padding:10px 16px}
-#qr{display:inline-block;background:#fff;padding:12px;border:3px solid var(--gold);border-radius:12px;margin:14px}
-.close{font-size:clamp(34px,8vw,58px);color:var(--mar2);line-height:1.2}
-#music{position:fixed;right:14px;bottom:calc(14px + env(safe-area-inset-bottom,0px));z-index:60;margin:0}
-@media(max-width:760px){.hero{grid-template-columns:1fr;text-align:center}.hero .pill{margin:auto}}
-</style></head><body>
-<canvas id="fx"></canvas>
-<div id="sp">
-<div class="bells"><svg id="b1" viewBox="0 0 40 90"><path d="M20 0V40" stroke="#c9a24b"/><path d="M6 80Q8 50 20 44Q32 50 34 80Z" fill="#d4a63d" stroke="#8a6a1c" stroke-width="2"/><rect x="3" y="78" width="34" height="6" rx="3" fill="#e9c46a"/><circle cx="20" cy="88" r="3" fill="#8a6a1c"/></svg><svg viewBox="0 0 40 90"><path d="M20 0V40" stroke="#c9a24b"/><path d="M6 80Q8 50 20 44Q32 50 34 80Z" fill="#d4a63d" stroke="#8a6a1c" stroke-width="2"/><rect x="3" y="78" width="34" height="6" rx="3" fill="#e9c46a"/></svg><svg viewBox="0 0 40 90"><path d="M20 0V40" stroke="#c9a24b"/><path d="M6 80Q8 50 20 44Q32 50 34 80Z" fill="#d4a63d" stroke="#8a6a1c" stroke-width="2"/><rect x="3" y="78" width="34" height="6" rx="3" fill="#e9c46a"/></svg></div>
-<div class="te" style="font-size:20px;margin-top:10px">శ్రీరస్తు · శుభమస్తు · అవిఘ్నమస్తు</div>
-<div class="med sc">R&amp;P</div>
-<div class="cz" style="font-size:13px">The Wedding of</div>
-<h1 class="sc">Rishikesh &amp; Prathyusha</h1>
-<div class="cz" style="font-size:14px;margin-bottom:22px">11 – 14 · December · 2026</div>
-<button class="btn g" id="open">♪ Open Invitation</button>
-<a class="nm" id="nomusic">Open without music</a>
-</div>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Wedding Invitation · 11 – 14 December 2026</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,500;0,600;0,700;1,500&family=Plus+Jakarta+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg-cream: #FBF7F0;
+      --bg-card: #FFFFFF;
+      --maroon: #6B1420;
+      --maroon-dark: #4A0B14;
+      --gold: #C29132;
+      --gold-light: #DFBA6B;
+      --text-dark: #2C1810;
+      --text-muted: #6E584F;
+      --border-subtle: #E8DEC8;
+    }
 
-<div class="tor"></div>
-<header class="hero"><div>
-<div class="te" style="font-size:22px;color:var(--mar2)">శ్రీరస్తు శుభమస్తు</div>
-<div style="font-style:italic;font-size:21px">With the blessings of our families</div>
-<h1 class="sc">Rishikesh <i>❤️</i> Prathyusha</h1>
-<div class="orn">—— ✦ ——</div>
-<p class="cz" style="font-size:14px;line-height:1.8">Two hearts, one beautiful journey,<br>a lifetime of togetherness.</p>
-<p>You are cordially invited to celebrate our wedding festivities.</p>
-<span class="pill cz" style="font-size:12px">11 – 14 December 2026</span><br><br>
-<a class="btn" href="#events">View Celebrations ↓</a><a class="btn al" href="#save">📅 Save the Date</a></div>
-<div class="arch"><svg viewBox="0 0 300 380" aria-label="Bride and groom under a mandap"><defs><linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#f0d78c"/><stop offset="1" stop-color="#b88a2b"/></linearGradient><radialGradient id="h"><stop offset="0" stop-color="#fff3d6"/><stop offset="1" stop-color="#fbd6b8"/></radialGradient></defs>
-<rect width="300" height="380" fill="url(#h)"/><path d="M0 0H300V60Q150 100 0 60Z" fill="#437a3a"/><g fill="#f39c12"><circle cx="20" cy="40" r="7"/><circle cx="70" cy="62" r="7"/><circle cx="125" cy="76" r="7"/><circle cx="175" cy="76" r="7"/><circle cx="230" cy="62" r="7"/><circle cx="280" cy="40" r="7"/></g>
-<g fill="#d4a63d" stroke="#8a6a1c"><path d="M112 72V100Q112 90 124 100V72"/><path d="M176 72V100Q176 90 188 100V72"/></g>
-<rect x="0" y="60" width="26" height="320" fill="#a0522d"/><rect x="274" y="60" width="26" height="320" fill="#a0522d"/><g stroke="#f7c04a" stroke-width="6" stroke-dasharray="2 8"><path d="M13 70V380M287 70V380"/></g>
-<circle cx="150" cy="220" r="96" fill="none" stroke="url(#g)" stroke-width="3" stroke-dasharray="3 7"/>
-<path d="M62 380Q66 262 105 256Q142 262 146 380Z" fill="#8b1a2b" stroke="url(#g)" stroke-width="3"/><path d="M80 290Q105 330 140 290" fill="none" stroke="#f0d78c" stroke-width="5"/><circle cx="105" cy="222" r="28" fill="#e0a77c"/><path d="M76 216Q105 170 134 216Q105 196 76 216Z" fill="#241010"/><circle cx="105" cy="196" r="4" fill="#c0392b"/><path d="M92 250Q105 262 118 250" stroke="#f0d78c" stroke-width="4" fill="none"/>
-<path d="M156 380Q160 262 198 256Q236 262 240 380Z" fill="#fffaf0" stroke="url(#g)" stroke-width="3"/><path d="M165 276Q198 320 236 276" fill="none" stroke="#c0392b" stroke-width="7"/><circle cx="198" cy="222" r="28" fill="#e0a77c"/><path d="M168 208Q198 176 228 208Q198 196 168 208Z" fill="#f5e6c8" stroke="url(#g)" stroke-width="3"/><rect x="170" y="196" width="56" height="14" rx="7" fill="#f0d78c"/><circle cx="198" cy="206" r="3" fill="#c0392b"/>
-<path d="M140 330Q150 322 160 330" stroke="#e0a77c" stroke-width="9" fill="none"/></svg></div>
-</header>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
 
-<div class="band" id="count"><div class="te">శుభ ముహూర్తం</div><div class="cz" style="font-size:12px">Counting down to the Muhurtham</div><h2 class="sc ttl">Our Big Day</h2>
-<div class="cd" id="cd"></div><div class="cz" style="font-size:12px">Monday · 14 December 2026 · 4:02 AM</div><div style="font-size:26px;margin-top:8px">🪷</div></div>
+    html {
+      scroll-behavior: smooth;
+    }
 
-<section id="events"><div class="te" style="color:var(--mar2)">పెళ్లి వేడుకలు</div><div class="cz" style="font-size:12px">Join us for every blessed moment</div><h2 class="sc ttl">Wedding Celebrations</h2><div class="orn">——— ✦ ———</div><div class="grid" id="evs"></div></section>
+    body {
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+      font-family: 'Plus Jakarta Sans', sans-serif;
+      line-height: 1.6;
+      -webkit-font-smoothing: antialiased;
+    }
 
-<section id="save"><div class="cz" style="font-size:12px">Please</div><h2 class="sc ttl">Save the Date</h2>
-<div class="cz" style="font-size:13px">Monday · December</div><div class="big">14</div><div class="cz" style="font-size:14px">2026 · 4:02 AM</div>
-<p style="font-style:italic">Auspicious Muhurtham — mark your calendar for every celebration.</p>
-<a class="btn" target="_blank" rel="noopener" id="gcal">📅 Google Calendar</a><div style="font-size:26px;margin-top:6px">🪔 🪔 🪔</div></section>
+    h1, h2, h3, .serif {
+      font-family: 'Cormorant Garamond', serif;
+    }
 
-<section><div class="te" style="color:var(--mar2)">జ్ఞాపకాలు</div><div class="cz" style="font-size:12px">Moments of togetherness</div><h2 class="sc ttl">Our Gallery</h2>
-<div class="gal" id="gal"></div><label class="btn al">📷 Preview your photos<input type="file" accept="image/*" multiple hidden id="up"></label></section>
+    /* Hero Section */
+    .hero {
+      background: radial-gradient(circle at top, var(--maroon) 0%, var(--maroon-dark) 100%);
+      color: var(--bg-cream);
+      text-align: center;
+      padding: 5rem 1.5rem 4.5rem;
+      border-bottom: 4px solid var(--gold);
+    }
 
-<section><div class="te" style="color:var(--mar2)">వేదిక</div><div class="cz" style="font-size:12px">Where hearts unite</div><h2 class="sc ttl">The Venue</h2>
-<div class="vc"><div class="cz" style="font-size:11px">Wedding Reception &amp; Wedding Ceremony</div><p style="font:700 24px 'Cinzel',serif;margin:8px 0">Bhagya Sri Function Hall</p><p>Vinayaka Nagar, Opp. Union Bank of India,<br>Gajuwaka, Andhra Pradesh 530044</p>
-<a class="btn" target="_blank" rel="noopener" href="https://maps.app.goo.gl/4yWFefZJTtpgF4oq8?g_st=iw">📍 Open in Google Maps</a><div style="font-size:24px">🪔 🪷 🪔</div></div></section>
+    .invocation {
+      color: var(--gold-light);
+      letter-spacing: 0.2em;
+      font-size: 0.85rem;
+      font-weight: 600;
+      margin-bottom: 0.75rem;
+    }
 
-<section><div class="te" style="color:var(--mar2)">ఆహ్వానం పంచుకోండి</div><div class="cz" style="font-size:12px">Spread the joy with family &amp; friends</div><h2 class="sc ttl">Share the Invitation</h2>
-<div class="lk"><input id="lnk" readonly><button class="btn" id="copy">🔗 Copy Link</button></div>
-<div class="sh"><a class="btn al" target="_blank" rel="noopener" id="wa">💬 WhatsApp</a><button class="btn al" id="ig">📸 Instagram</button><a class="btn al" target="_blank" rel="noopener" id="fb">👍 Facebook</a><button class="btn al" id="more">↗ More Apps</button></div>
-<div id="qr"></div><div class="cz" style="font-size:11px">Scan to open</div></section>
+    .sub-invocation {
+      font-family: 'Cormorant Garamond', serif;
+      font-style: italic;
+      font-size: 1.15rem;
+      color: rgba(251, 247, 240, 0.85);
+      margin-bottom: 1.5rem;
+    }
 
-<section><div class="orn">🪷 ✦ 🪔 ✦ 🪷</div><div class="sc close">We look forward to celebrating our special day with you!</div>
-<p style="font-size:22px">With love, Rishikesh &amp; Prathyusha 💛</p><div class="te" style="font-size:22px">శుభం భూయాత్</div></section>
-<button class="btn" id="music">🎵 Music: OFF</button>
+    .hero h1 {
+      font-size: clamp(2.8rem, 7vw, 4.5rem);
+      font-weight: 600;
+      color: #FFFFFF;
+      line-height: 1.1;
+      margin-bottom: 1rem;
+    }
 
-<script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
-<script>
-const E=[["🔔","Friday","11","Pelli Rata","పెళ్లి రాట","7:35 AM","Same timing for both bride and groom","20261211T073500/20261211T083500"],
-["🌼","Friday","11","Bride-to-Be Ceremony","పెళ్లికూతురు కార్యక్రమం","9:35 AM","Followed by lunch","20261211T093500/20261211T130000"],
-["🪔","Saturday","12","Haldi Ceremony","పసుపు వేడుక","2:00 PM onwards","Afternoon of colours, joy and laughter","20261212T140000/20261212T170000"],
-["🌺","Sunday","13","Groom-to-Be Ceremony","పెళ్లికొడుకు కార్యక్రమం","10:30 AM","Followed by lunch","20261213T103000/20261213T140000"],
-["🥂","Sunday","13","Wedding Reception","రిసెప్షన్","6:30 PM onwards","Followed by dinner","20261213T183000/20261213T220000"],
-["🪷","Monday","14","Wedding Ceremony","వివాహ మహోత్సవం","Auspicious Muhurtham · 4:02 AM","Your presence and blessings will make our sacred union complete","20261214T040200/20261214T080000"]];
-const V='Bhagya Sri Function Hall, Vinayaka Nagar, Gajuwaka, Andhra Pradesh 530044';
-const evs=document.getElementById('evs'),io=new IntersectionObserver(es=>es.forEach(x=>x.isIntersecting&&x.target.classList.add('in')),{threshold:.1});
-E.forEach((e,i)=>{const u='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent(e[3]+' – Rishikesh & Prathyusha')+'&dates='+e[7]+'&ctz=Asia/Kolkata&location='+encodeURIComponent(V);
-evs.insertAdjacentHTML('beforeend',`<div class="card${i==5?' feat':''}"><div class="tor"></div><div class="row"><div class="ic">${e[0]}</div><div class="dt"><small>${e[1].toUpperCase()}</small><b>${e[2]}</b><small>DECEMBER</small></div></div><h3>${e[3]}</h3><div class="te">${e[4]}</div><p>🕰️ <b>${e[5]}</b></p><p style="font-style:italic">${e[6]}</p>${i>=4?`<p>📍 ${V.split(',')[0]}, Gajuwaka</p>`:''}<a class="btn al" target="_blank" rel="noopener" href="${u}">📅 Add to Calendar</a></div>`)});
-document.querySelectorAll('.card').forEach(c=>io.observe(c));
-document.getElementById('gcal').href='https://calendar.google.com/calendar/render?action=TEMPLATE&text='+encodeURIComponent('Rishikesh Weds Prathyusha – Wedding')+'&dates=20261214T040200/20261214T080000&ctz=Asia/Kolkata&location='+encodeURIComponent(V);
-const T=new Date('2026-12-14T04:02:00+05:30'),cd=document.getElementById('cd');
-function tick(){const s=Math.max(0,(T-Date.now())/1000|0),v=[[s/86400|0,'Days'],[s/3600%24|0,'Hours'],[s/60%60|0,'Minutes'],[s%60,'Seconds']];cd.innerHTML=v.map(a=>`<div><b>${String(a[0]).padStart(2,'0')}</b>${a[1]}</div>`).join('')}tick();setInterval(tick,1000);
-const gal=document.getElementById('gal');['💑','🪷','💍','🌸','🪔'].forEach((x,i)=>gal.insertAdjacentHTML('beforeend',`<div>${x}<small>Photo ${i+1}</small></div>`));
-document.getElementById('up').onchange=e=>{gal.innerHTML='';[...e.target.files].forEach(f=>{const d=document.createElement('div'),im=new Image();im.src=URL.createObjectURL(f);d.appendChild(im);gal.appendChild(d)})};
-const url=location.href.split('#')[0],msg='You are invited to the wedding of Rishikesh ❤️ Prathyusha! 11–14 December 2026, Gajuwaka. Open the invitation: '+url;
-lnk.value=url;wa.href='https://wa.me/?text='+encodeURIComponent(msg);fb.href='https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(url);
-async function cp(b,t){try{await navigator.clipboard.writeText(url);b.textContent=t}catch(e){lnk.select();prompt('Copy this link:',url)}}
-copy.onclick=function(){cp(this,'✅ Copied!')};ig.onclick=function(){cp(this,'✅ Copied – paste in Instagram')};
-more.onclick=async()=>{try{await navigator.share({title:'Rishikesh & Prathyusha – Wedding',text:msg,url})}catch(e){cp(more,'✅ Link copied')}};
-try{new QRCode(qr,{text:url,width:170,height:170,colorDark:'#6b0f1a',colorLight:'#ffffff'})}catch(e){}
-// petals & sparkles
-const c=document.getElementById('fx'),x=c.getContext('2d');let W,H;function rs(){W=c.width=innerWidth;H=c.height=innerHeight}rs();addEventListener('resize',rs);
-const P=[...Array(30)].map(()=>({x:Math.random()*W,y:Math.random()*H,r:4+Math.random()*6,v:.5+Math.random()*1.1,s:Math.random()*6,a:Math.random()*6,c:['#e5517a','#fde3d0','#f39c12','#f7b6c2'][Math.random()*4|0]})),S=[...Array(26)].map(()=>({x:Math.random()*W,y:Math.random()*H,p:Math.random()*6}));
-(function f(t){x.clearRect(0,0,W,H);P.forEach(p=>{p.y+=p.v;p.x+=Math.sin(p.s+=.02)*.8;p.a+=.02;if(p.y>H+20){p.y=-20;p.x=Math.random()*W}x.save();x.translate(p.x,p.y);x.rotate(p.a);x.fillStyle=p.c;x.globalAlpha=.8;x.beginPath();x.ellipse(0,0,p.r,p.r/2,0,0,7);x.fill();x.restore()});
-S.forEach(s=>{const o=(Math.sin(t/500+s.p)+1)/2;x.fillStyle=`rgba(240,200,90,${o*.8})`;x.fillRect(s.x-1,s.y-1,2+o*2,2+o*2)});requestAnimationFrame(f)})(0);
-// music: original romantic ballad (generated, royalty-free) or your own music.mp3 if added
-let ac,on=false,step=0,tm,mg;const mb=document.getElementById('music');
-const au=new Audio('music.mp3');au.loop=true;let hasFile=false;au.addEventListener('canplaythrough',()=>hasFile=true);try{au.load()}catch(e){}
-const m=n=>440*Math.pow(2,(n-69)/12),CH=[[62,66,69],[57,61,64],[59,62,66],[55,59,62]],ML=[[81,0,78,0,81,0,83,0],[85,0,81,0,83,0,81,0],[78,0,81,0,83,0,78,0],[79,0,83,0,81,0,78,0]];
-function env(o,t,d,g,at){const a=ac.createGain();a.gain.setValueAtTime(0,t);a.gain.linearRampToValueAtTime(g,t+at);a.gain.exponentialRampToValueAtTime(.0001,t+d);o.connect(a);a.connect(mg);o.start(t);o.stop(t+d+.1)}
-function pn(f,d,g,t){[1,2,3].forEach((h,i)=>{const o=ac.createOscillator();o.frequency.value=f*h;env(o,t,d/(i+1),g/(i*2+1),.01)})}
-function fl(f,d,t){const o=ac.createOscillator(),l=ac.createOscillator(),lg=ac.createGain();o.type='triangle';o.frequency.value=f;l.frequency.value=5;lg.gain.value=f*.006;l.connect(lg);lg.connect(o.frequency);l.start(t);l.stop(t+d+.2);env(o,t,d,.07,.12)}
-function beat(){const t=ac.currentTime+.05,bar=(step>>3)%4,k=step%8,ch=CH[bar];
-if(k==0){pn(m(ch[0]-12),3,.1,t);ch.forEach(n=>{const o=ac.createOscillator();o.type='triangle';o.frequency.value=m(n);env(o,t,3.2,.025,.4)})}
-pn(m(ch[[0,1,2,1,0,1,2,1][k]]+12),1.1,.06,t);if(ML[bar][k])fl(m(ML[bar][k]),1.1,t);
-if(step%16==8){const o=ac.createOscillator();o.frequency.value=m(ch[2]+24);env(o,t,1.8,.025,.01)}step++}
-function tog(){if(hasFile){if(au.paused){au.play();mb.textContent='🎵 Music: ON'}else{au.pause();mb.textContent='🎵 Music: OFF'}return}
-if(!ac){ac=new(window.AudioContext||window.webkitAudioContext)();mg=ac.createGain();mg.gain.value=.9;mg.connect(ac.destination)}
-if(!on){ac.resume();tm=setInterval(beat,390);on=true;mb.textContent='🎵 Music: ON'}else{clearInterval(tm);on=false;mb.textContent='🎵 Music: OFF'}}
-mb.onclick=tog;
-document.getElementById('open').onclick=()=>{sp.classList.add('off');if(!on&&(hasFile?au.paused:true))tog()};
-document.getElementById('nomusic').onclick=()=>sp.classList.add('off');
-</script></body></html>
+    .hero-note {
+      max-width: 540px;
+      margin: 0 auto 1.75rem;
+      font-size: 1rem;
+      color: rgba(251, 247, 240, 0.9);
+    }
+
+    .hero-meta {
+      display: inline-block;
+      padding: 0.6rem 1.4rem;
+      border: 1px solid rgba(223, 186, 107, 0.4);
+      border-radius: 999px;
+      color: var(--gold-light);
+      font-size: 0.9rem;
+      font-weight: 500;
+      margin-bottom: 2.5rem;
+    }
+
+    /* Countdown */
+    .countdown-wrapper {
+      margin-bottom: 2.5rem;
+    }
+
+    .countdown {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+      margin-bottom: 0.75rem;
+    }
+
+    .time-box {
+      background: rgba(0, 0, 0, 0.25);
+      border: 1px solid rgba(223, 186, 107, 0.3);
+      border-radius: 12px;
+      padding: 0.9rem 1.1rem;
+      min-width: 80px;
+    }
+
+    .time-box span {
+      display: block;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2rem;
+      font-weight: 700;
+      color: var(--gold-light);
+      line-height: 1;
+    }
+
+    .time-box small {
+      display: block;
+      font-size: 0.68rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      margin-top: 0.4rem;
+      color: rgba(251, 247, 240, 0.75);
+    }
+
+    .countdown-label {
+      font-size: 0.75rem;
+      letter-spacing: 0.2em;
+      color: var(--gold-light);
+      text-transform: uppercase;
+    }
+
+    /* Buttons */
+    .hero-actions {
+      display: flex;
+      justify-content: center;
+      gap: 1rem;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      padding: 0.85rem 1.8rem;
+      border-radius: 999px;
+      font-size: 0.92rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: transform 0.15s ease, background-color 0.15s ease;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn:hover {
+      transform: translateY(-2px);
+    }
+
+    .btn-gold {
+      background-color: var(--gold);
+      color: #FFFFFF;
+    }
+
+    .btn-gold:hover {
+      background-color: #B08127;
+    }
+
+    .btn-outline {
+      background-color: transparent;
+      color: var(--bg-cream);
+      border: 1px solid var(--gold-light);
+    }
+
+    .btn-outline:hover {
+      background-color: rgba(223, 186, 107, 0.15);
+    }
+
+    /* Shared Section Layout */
+    section {
+      max-width: 860px;
+      margin: 0 auto;
+      padding: 4.5rem 1.5rem;
+    }
+
+    .section-header {
+      text-align: center;
+      margin-bottom: 3rem;
+    }
+
+    .eyebrow {
+      display: block;
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.2em;
+      text-transform: uppercase;
+      color: var(--gold);
+      margin-bottom: 0.5rem;
+    }
+
+    .section-header h2 {
+      font-size: clamp(2.2rem, 5vw, 3rem);
+      color: var(--maroon);
+      font-weight: 600;
+    }
+
+    .divider {
+      color: var(--gold);
+      font-size: 1.25rem;
+      margin-top: 0.5rem;
+    }
+
+    /* Events Grid */
+    .events-list {
+      display: grid;
+      gap: 1.5rem;
+    }
+
+    .event-card {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-left: 4px solid var(--gold);
+      border-radius: 14px;
+      padding: 1.75rem;
+      box-shadow: 0 4px 20px rgba(44, 24, 16, 0.04);
+      display: flex;
+      flex-direction: column;
+      gap: 0.5rem;
+    }
+
+    .event-card.highlight {
+      border-left-color: var(--maroon);
+      background: linear-gradient(to right, #FFFDF9, #FFFFFF);
+    }
+
+    .event-time {
+      font-size: 0.8rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--maroon);
+    }
+
+    .event-card h3 {
+      font-size: 1.75rem;
+      color: var(--text-dark);
+      font-weight: 600;
+    }
+
+    .event-desc {
+      color: var(--text-muted);
+      font-size: 0.95rem;
+    }
+
+    .event-footer {
+      margin-top: 0.75rem;
+      padding-top: 0.75rem;
+      border-top: 1px dashed var(--border-subtle);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      flex-wrap: wrap;
+      gap: 0.75rem;
+      font-size: 0.85rem;
+      color: var(--text-muted);
+    }
+
+    .cal-link {
+      color: var(--maroon);
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    .cal-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Venue Section */
+    .venue-box {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 18px;
+      padding: 3rem 2rem;
+      text-align: center;
+      box-shadow: 0 6px 24px rgba(44, 24, 16, 0.05);
+    }
+
+    .venue-box h2 {
+      font-size: clamp(2rem, 4.5vw, 2.75rem);
+      color: var(--maroon);
+      margin: 0.4rem 0;
+    }
+
+    .venue-address {
+      max-width: 480px;
+      margin: 1rem auto 1.75rem;
+      color: var(--text-muted);
+      font-size: 1rem;
+    }
+
+    /* Wishes Wall */
+    .wishes-form {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 16px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+      display: grid;
+      gap: 1rem;
+    }
+
+    .wishes-form input,
+    .wishes-form textarea {
+      width: 100%;
+      padding: 0.85rem 1rem;
+      border: 1px solid var(--border-subtle);
+      border-radius: 10px;
+      font-family: inherit;
+      font-size: 0.95rem;
+      background-color: var(--bg-cream);
+      color: var(--text-dark);
+    }
+
+    .wishes-form input:focus,
+    .wishes-form textarea:focus {
+      outline: none;
+      border-color: var(--gold);
+      background-color: #FFFFFF;
+    }
+
+    .wishes-wall {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .wish-item {
+      background: var(--bg-card);
+      border: 1px solid var(--border-subtle);
+      border-radius: 12px;
+      padding: 1.25rem 1.5rem;
+    }
+
+    .wish-item strong {
+      color: var(--maroon);
+      display: block;
+      margin-bottom: 0.25rem;
+    }
+
+    .empty-wishes {
+      text-align: center;
+      color: var(--text-muted);
+      font-style: italic;
+    }
+
+    /* Footer */
+    footer {
+      background-color: var(--maroon-dark);
+      color: var(--bg-cream);
+      text-align: center;
+      padding: 3.5rem 1.5rem;
+      border-top: 4px solid var(--gold);
+    }
+
+    footer h2 {
+      font-size: 2.2rem;
+      color: var(--gold-light);
+      margin-bottom: 0.4rem;
+    }
+
+    footer p {
+      font-size: 0.92rem;
+      color: rgba(251, 247, 240, 0.8);
+      margin-bottom: 0.3rem;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- HERO -->
+  <header class="hero">
+    <div class="invocation">॥ SRI GANESHAYA NAMAHA ॥</div>
+    <p class="sub-invocation">With the blessings of our elders &amp; together with our families</p>
+    <h1>Rishikesh weds Prathyusha</h1>
+    <p class="hero-note">We’re so excited to share our special day with you! Your presence and blessings would mean the world to us 💖</p>
+    <div class="hero-meta">11 – 14 December 2026 ✦ Bhagya Sri Function Hall, Gajuwaka</div>
+
+    <div class="countdown-wrapper">
+      <div class="countdown" id="countdown">
+        <div class="time-box"><span id="days">00</span><small>Days</small></div>
+        <div class="time-box"><span id="hours">00</span><small>Hours</small></div>
+        <div class="time-box"><span id="minutes">00</span><small>Minutes</small></div>
+        <div class="time-box"><span id="seconds">00</span><small>Seconds</small></div>
+      </div>
+      <div class="countdown-label">Until the Sumuhurtham</div>
+    </div>
+
+    <div class="hero-actions">
+      <a href="#celebrations" class="btn btn-gold">See the celebrations</a>
+      <a href="#wishes" class="btn btn-outline">Send your wishes</a>
+    </div>
+  </header>
+
+  <!-- EVENTS -->
+  <section id="celebrations">
+    <div class="section-header">
+      <span class="eyebrow">Four Days of Rituals &amp; Joy</span>
+      <h2>The Celebrations</h2>
+      <div class="divider">❁</div>
+    </div>
+
+    <div class="events-list">
+      <!-- Pelli Rata -->
+      <article class="event-card">
+        <div class="event-time">11 Dec · Friday · 7:35 AM</div>
+        <h3>🪔 Pelli Rata</h3>
+        <p class="event-desc">The auspicious ceremonial beginning marking the start of our wedding festivities.</p>
+        <div class="event-footer">
+          <span>📍 Bhagya Sri Function Hall, Gajuwaka</span>
+          <a class="cal-link" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Pelli+Rata+-+Rishikesh+%26+Prathyusha&dates=20261211T020500Z/20261211T033500Z&location=Bhagya+Sri+Function+Hall,+Vinayaka+Nagar,+Opp.+Union+Bank+of+India,+Gajuwaka,+Andhra+Pradesh+530044">+ Add to calendar</a>
+        </div>
+      </article>
+
+      <!-- Bride to be -->
+      <article class="event-card">
+        <div class="event-time">11 Dec · Friday · 9:35 AM</div>
+        <h3>🌸 Bride to Be</h3>
+        <p class="event-desc">Traditional rituals and blessings for the bride, followed by lunch.</p>
+        <div class="event-footer">
+          <span>📍 Bhagya Sri Function Hall, Gajuwaka</span>
+          <a class="cal-link" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Bride+to+Be+-+Prathyusha&dates=20261211T040500Z/20261211T083000Z&location=Bhagya+Sri+Function+Hall,+Vinayaka+Nagar,+Opp.+Union+Bank+of+India,+Gajuwaka,+Andhra+Pradesh+530044">+ Add to calendar</a>
+        </div>
+      </article>
+
+      <!-- Haldi -->
+      <article class="event-card">
+        <div class="event-time">12 Dec · Saturday · From 2:00 PM</div>
+        <h3>🌼 Haldi</h3>
+        <p class="event-desc">A sunny, joyful afternoon — turmeric, laughter, music and blessings.</p>
+        <div class="event-footer">
+          <span>📍 Bhagya Sri Function Hall, Gajuwaka</span>
+          <a class="cal-link" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Haldi+-+Rishikesh+%26+Prathyusha&dates=20261212T083000Z/20261212T113000Z&location=Bhagya+Sri+Function+Hall,+Vinayaka+Nagar,+Opp.+Union+Bank+of+India,+Gajuwaka,+Andhra+Pradesh+530044">+ Add to calendar</a>
+        </div>
+      </article>
+
+      <!-- Groom to be -->
+      <article class="event-card">
+        <div class="event-time">13 Dec · Sunday · Time TBD</div>
+        <h3>✨ Groom to Be</h3>
+        <p class="event-desc">Traditional rituals and blessings as the groom gets ready.</p>
+        <div class="event-footer">
+          <span>📍 Bhagya Sri Function Hall, Gajuwaka</span>
+          <a class="cal-link" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Groom+to+Be+-+Rishikesh&dates=20261213/20261214&location=Bhagya+Sri+Function+Hall,+Vinayaka+Nagar,+Opp.+Union+Bank+of+India,+Gajuwaka,+Andhra+Pradesh+530044">+ Add to calendar</a>
+        </div>
+      </article>
+
+      <!-- Wedding Reception -->
+      <article class="event-card">
+        <div class="event-time">13 Dec · Sunday · From 6:30 PM</div>
+        <h3>🎶 Wedding Reception</h3>
+        <p class="event-desc">An evening of music, warm wishes, and celebration, followed by dinner.</p>
+        <div class="event-footer">
+          <span>📍 Bhagya Sri Function Hall, Gajuwaka</span>
+          <a class="cal-link" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Reception+-+Rishikesh+%26+Prathyusha&dates=20261213T130000Z/20261213T170000Z&location=Bhagya+Sri+Function+Hall,+Vinayaka+Nagar,+Opp.+Union+Bank+of+India,+Gajuwaka,+Andhra+Pradesh+530044">+ Add to calendar</a>
+        </div>
+      </article>
+
+      <!-- Wedding Ceremony -->
+      <article class="event-card highlight">
+        <div class="event-time">14 Dec · Monday · Early Morning 4:02 AM</div>
+        <h3>🔥 The Wedding Ceremony (Sumuhurtham)</h3>
+        <p class="event-desc">In the auspicious early hours, as the mantras are chanted, we begin our forever.</p>
+        <div class="event-footer">
+          <span>📍 Bhagya Sri Function Hall, Gajuwaka</span>
+          <a class="cal-link" target="_blank" rel="noopener" href="https://calendar.google.com/calendar/render?action=TEMPLATE&text=Wedding+Ceremony+-+Rishikesh+%26+Prathyusha&dates=20261213T223200Z/20261214T013000Z&location=Bhagya+Sri+Function+Hall,+Vinayaka+Nagar,+Opp.+Union+Bank+of+India,+Gajuwaka,+Andhra+Pradesh+530044">+ Add to calendar</a>
+        </div>
+      </article>
+    </div>
+  </section>
+
+  <!-- VENUE -->
+  <section id="venue">
+    <div class="venue-box">
+      <span class="eyebrow">All Events At</span>
+      <h2>Bhagya Sri Function Hall</h2>
+      <div class="divider">❁</div>
+      <p class="venue-address">
+        Vinayaka Nagar, Opp. Union Bank of India,<br>
+        Gajuwaka, Andhra Pradesh 530044
+      </p>
+      <a href="https://maps.app.goo.gl/4yWFefZJTtpgF4oq8?g_st=iw" target="_blank" rel="noopener" class="btn btn-gold">Get directions</a>
+    </div>
+  </section>
+
+  <!-- WISHES -->
+  <section id="wishes">
+    <div class="section-header">
+      <span class="eyebrow">Blessings &amp; Love</span>
+      <h2>Convey Your Best Wishes</h2>
+      <div class="divider">❁</div>
+    </div>
+
+    <form class="wishes-form" id="wishForm">
+      <input type="text" id="guestName" placeholder="Your name" required>
+      <textarea id="guestMessage" rows="3" placeholder="Your wishes for the couple" required></textarea>
+      <button type="submit" class="btn btn-gold">Send wishes 💖</button>
+    </form>
+
+    <div class="wishes-wall" id="wishesWall">
+      <p class="empty-wishes" id="emptyState">Be the first to leave a wish 💖</p>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer>
+    <h2>Rishikesh &amp; Prathyusha</h2>
+    <p>11 – 14 December 2026 · Bhagya Sri Function Hall, Gajuwaka</p>
+    <p>Can’t wait to celebrate with you ✨</p>
+  </footer>
+
+  <script>
+    // Live Countdown to 14 Dec 2026 04:02 AM IST (+05:30)
+    const weddingDate = new Date("2026-12-14T04:02:00+05:30").getTime();
+
+    function updateCountdown() {
+      const now = Date.now();
+      const diff = weddingDate - now;
+
+      if (diff <= 0
